@@ -1,13 +1,20 @@
-class third {
-  public static void main(String[] args) {
-    int n = 10, fTerm = 0, sTerm = 1;
-    System.out.println("Fibonacci Series till " + n + " terms:");
-    for (int i = 1; i <= n; ++i) {
-      System.out.print(fTerm + ", ");
-      int nextTerm = fTerm + sTerm;
-      fTerm = sTerm;
-      sTerm = nextTerm;
-    }
-  }
-}
+import java.util.Scanner;  
+public class Test {  
+	public static void main(String args[]){ 
+		Scanner input = null; 
+		try { 
+			System.out.println("Please Enter 10 numbers"); 
+			input = new Scanner(System.in); 
+			int sum = 0; 
+			for (int i = 0; i < 10; i += 1){ 
+				sum += input.nextInt(); 
+			} 
+			System.out.println("The total sum is: " + sum ); 
+		} catch (Exception e) {  
+			e.printStackTrace(); 
+		} finally { 
+			input.close(); 
+		} 
+	} 
+} 
 
